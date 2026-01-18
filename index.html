@@ -607,13 +607,18 @@
           <p class="footer-form-title">Subscribe</p>
 
           <form class="footer-form">
-            <input
-              class="footer-form-input"
-              aria-label="E-mail"
-              name="footer-input-email"
-              type="email"
-              placeholder="E-mail"
-            />
+            <div>
+              <label class="visually-hidden" for="footer-input-email"
+                >Email</label
+              >
+              <input
+                class="footer-form-input"
+                name="footer-input-email"
+                id="footer-input-email"
+                type="email"
+                placeholder="E-mail"
+              />
+            </div>
             <button type="submit" class="footer-form-submit-button">
               Subscribe
               <svg class="footer-form-icon" width="24" height="20">
