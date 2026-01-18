@@ -601,6 +601,102 @@
         </div>
       </div>
     </footer>
+    <div class="overlay">
+      <div class="modal">
+        <button type="button" class="modal-close-button">
+          <svg
+            class="modal-close-icon"
+            width="24"
+            height="24"
+            aria-hidden="true"
+          >
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+
+        <p class="modal-title">Leave your contacts and we will call you back</p>
+
+        <form class="modal-form">
+          <div class="form-field">
+            <label class="form-label" for="input-name">Name</label>
+            <div class="input-wrapper">
+              <input
+                class="form-input"
+                name="input-name"
+                id="input-name"
+                type="text"
+              />
+              <svg class="form-icon" width="12" height="12">
+                <use href="./images/icons.svg#icon-name"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label class="form-label" for="input-tel">Phone</label>
+            <div class="input-wrapper">
+              <input
+                class="form-input"
+                name="input-tel"
+                id="input-tel"
+                type="tel"
+              />
+              <svg class="form-icon" width="13" height="13">
+                <use href="./images/icons.svg#icon-phone"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label class="form-label" for="input-email">Email</label>
+            <div class="input-wrapper">
+              <input
+                class="form-input"
+                name="input-email"
+                id="input-email"
+                type="email"
+              />
+              <svg class="form-icon" width="15" height="12">
+                <use href="./images/icons.svg#icon-email"></use>
+              </svg>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label class="form-label" for="input-comment">Comment</label>
+            <div class="input-wrapper">
+              <textarea
+                class="form-textarea"
+                name="input-comment"
+                id="input-comment"
+                placeholder="Text input"
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="form-field form-field-checkbox">
+            <input
+              type="checkbox"
+              name="input-checkbox"
+              id="input-checkbox"
+              required
+              value="true"
+              class="form-checkbox visually-hidden"
+            />
+            <label for="input-checkbox" class="form-label">
+              <span>
+                <svg class="form-check-icon" width="10" height="8">
+                  <use href="./images/icons.svg#icon-checked"></use>
+                </svg> </span
+              >I accept the terms and conditions of the&nbsp;
+              <a href="#" class="form-checkbox-label">Privacy Policy</a></label
+            >
+          </div>
+
+          <button type="submit" class="form-submit-button">Send</button>
+        </form>
+      </div>
+    </div>
     <script>
       const navLinks = document.querySelectorAll(".nav-item");
 
