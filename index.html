@@ -47,7 +47,9 @@
       <section id="studio" class="hero-section">
         <div class="container hero-container">
           <h1 class="main-title">Effective Solutions for Your Business</h1>
-          <button type="button" class="hero-button">Order Service</button>
+          <button type="button" class="hero-button" data-modal-open>
+            Order Service
+          </button>
         </div>
       </section>
 
@@ -532,7 +534,7 @@
 
     <footer class="footer-section">
       <div class="container footer-container">
-        <div class="footer-data">
+        <div class="footer-info">
           <a href="./index.html" class="logo footer-logo"
             ><span class="logo-first-word">WEB</span
             ><span class="logo-second-word">STUDIO</span></a
@@ -542,7 +544,8 @@
             digital marketing & growth solutions.
           </p>
         </div>
-        <div>
+
+        <div class="footer-social">
           <p class="footer-span">Social media</p>
           <ul class="social-icon-list">
             <li>
@@ -599,11 +602,32 @@
             </li>
           </ul>
         </div>
+
+        <div class="footer-subscribe">
+          <p class="footer-form-title">Subscribe</p>
+
+          <form class="footer-form">
+            <input
+              class="footer-form-input"
+              aria-label="E-mail"
+              name="footer-input-email"
+              type="email"
+              placeholder="E-mail"
+            />
+            <button type="submit" class="footer-form-submit-button">
+              Subscribe
+              <svg class="footer-form-icon" width="24" height="20">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
-    <div class="overlay">
+
+    <div class="overlay" data-modal>
       <div class="modal">
-        <button type="button" class="modal-close-button">
+        <button type="button" class="modal-close-button" data-modal-close>
           <svg
             class="modal-close-icon"
             width="24"
@@ -697,28 +721,7 @@
         </form>
       </div>
     </div>
-    <script>
-      const navLinks = document.querySelectorAll(".nav-item");
-
-      function setActiveAnchor() {
-        const hash = window.location.hash;
-
-        navLinks.forEach((link) => {
-          link.classList.remove("is-active");
-
-          if (hash && link.getAttribute("href") === hash) {
-            link.classList.add("is-active");
-          }
-        });
-
-        // стан за замовчуванням (перша секція)
-        if (!hash) {
-          navLinks[0].classList.add("is-active");
-        }
-      }
-
-      setActiveAnchor();
-      window.addEventListener("hashchange", setActiveAnchor);
-    </script>
+    <script src="./js/nav-active.js"></script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
