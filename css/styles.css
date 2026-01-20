@@ -452,11 +452,17 @@ footer .logo-second-word {
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   padding: 8px 16px;
   background-color: transparent;
+  outline: none;
+  transition: border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 
   font-size: 12px;
-  line-height: 2.0;
+  line-height: 2;
   letter-spacing: 0.04em;
-  color: #ffffff
+  color: #ffffff;
+}
+
+.footer-form-input:focus {
+  border-color: #31d0aa;
 }
 
 .footer-form-input::placeholder {
@@ -479,13 +485,13 @@ footer .logo-second-word {
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 16px;
   transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-form-submit-button:hover,
 .footer-form-submit-button:focus {
-  background-color: #404bbf;
+  background-color: #31d0aa;
 }
 
 .footer-form-icon {
@@ -538,21 +544,30 @@ footer .logo-second-word {
   border-radius: 50%;
 
   padding: 0;
-  border: none;
-  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: #e7e9fc;
   cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-icon {
-  --color1: #e7e9fc;
-  --color2: rgba(0, 0, 0, 0.1);
-  --color3: #2e2f42;
+  fill: #2e2f42;
+  transition: fill 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-button:hover,
+.modal-close-button:focus {
+  background: #404bbf;
+  border-color: #404bbf;
 }
 
 .modal-close-button:hover > .modal-close-icon {
-  --color1: #404bbf;
-  --color2: #404bbf;
-  --color3: #ffffff;
+  fill: #ffffff;
 }
 
 .modal-title {
@@ -567,15 +582,7 @@ footer .logo-second-word {
 }
 
 .form-field {
-  margin-bottom: 8px;
-}
-
-.form-label {
-  color: #8e8f99;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.04em;
-  margin-bottom: 4px;
+  margin-bottom: 16px;
 }
 
 .input-wrapper {
@@ -637,7 +644,18 @@ footer .logo-second-word {
 }
 
 .form-field-checkbox {
-  margin: 16px 0 24px 0;
+  margin-bottom: 24px;
+}
+
+.form-label {
+  display: flex;
+  align-items: center;
+
+  color: #8e8f99;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  margin-bottom: 4px;
 }
 
 .form-checkbox:checked + .form-label span {
@@ -653,9 +671,10 @@ footer .logo-second-word {
   color: #4d5ae5;
 }
 
-.form-label {
-  display: flex;
-  align-items: center;
+.form-checkbox-label:hover,
+.form-checkbox-label:focus,
+.form-checkbox-label:visited {
+  color: #404bbf;
 }
 
 .form-label span {
