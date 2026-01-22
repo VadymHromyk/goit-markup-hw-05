@@ -566,7 +566,8 @@ footer .logo-second-word {
   border-color: #404bbf;
 }
 
-.modal-close-button:hover > .modal-close-icon {
+.modal-close-button:hover > .modal-close-icon,
+.modal-close-button:focus > .modal-close-icon {
   fill: #ffffff;
 }
 
@@ -583,6 +584,10 @@ footer .logo-second-word {
 
 .form-field {
   margin-bottom: 8px;
+}
+
+.form-field-textarea {
+  margin-bottom: 16px;
 }
 
 .input-wrapper {
@@ -699,6 +704,7 @@ footer .logo-second-word {
   border: none;
   border-radius: 4px;
   padding: 16px 65px;
+  min-width: 169px;
   cursor: pointer;
 
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
